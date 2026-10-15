@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071a33">
+<title>Goatbet — Demonstração</title>
+<style>
+:root{--bg:#071426;--panel:#0e223c;--panel2:#132b49;--blue:#1677ff;--cyan:#4bc7ff;--text:#f4f8ff;--muted:#9db1cb;--line:#24415f;--green:#35d49a;--gold:#ffd166}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#071426,#091a30 60%,#071426);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text)}button,input{font:inherit}button{cursor:pointer;border:0}a{color:inherit;text-decoration:none}.notice{background:#fff2cf;color:#543b00;text-align:center;padding:9px 12px;font-size:12px;font-weight:800;letter-spacing:.2px}.top{position:sticky;top:0;z-index:10;background:#08182bee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{max-width:1200px;margin:auto;display:flex;align-items:center;gap:20px;padding:14px 18px}.brand{font-size:24px;font-weight:950;letter-spacing:-1px;white-space:nowrap}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:8px;flex:1}.navlinks button,.ghost{background:transparent;color:#c9d9ec;padding:10px 12px;border-radius:10px}.navlinks button.active,.navlinks button:hover{background:var(--panel2);color:white}.pill{background:#122c4c;border:1px solid #315170;color:#cfe8ff;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:800}.primary{background:linear-gradient(135deg,#1680ff,#16b4ff);color:white;font-weight:850;border-radius:11px;padding:11px 15px;box-shadow:0 6px 20px #0878ff33}.layout{max-width:1200px;margin:22px auto;padding:0 18px;display:grid;grid-template-columns:220px minmax(0,1fr) 300px;gap:18px}.side,.card,.betbox{background:linear-gradient(180deg,#102641,#0c2038);border:1px solid var(--line);border-radius:16px}.side{padding:15px;height:max-content}.side h3,.betbox h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:4px 8px 12px}.side button{width:100%;display:flex;gap:11px;align-items:center;text-align:left;padding:12px;border-radius:10px;color:#d9e7f7;background:transparent;margin:2px 0}.side button:hover,.side button.active{background:#173758;color:#fff}.side .emoji{width:22px;text-align:center}.hero{background:radial-gradient(circle at 85% 20%,#1d79d8 0,transparent 35%),linear-gradient(120deg,#103a68,#0e2340 65%);border:1px solid #2b6092;border-radius:18px;padding:24px;position:relative;overflow:hidden;margin-bottom:18px}.hero:after{content:"G";position:absolute;right:30px;top:-35px;font-size:180px;font-weight:1000;color:#ffffff0a}.eyebrow{color:var(--cyan);font-size:11px;letter-spacing:1.7px;font-weight:900}.hero h1{font-size:clamp(25px,4vw,39px);line-height:1.08;margin:10px 0;max-width:470px}.hero p{color:#c0d4eb;max-width:470px;font-size:14px;line-height:1.6}.hero .cta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:17px}.hero small{color:#bad0e7}.section-head{display:flex;align-items:center;justify-content:space-between;margin:22px 2px 12px}.section-head h2{font-size:18px;margin:0}.section-head span{font-size:12px;color:var(--muted)}.sports{display:flex;gap:8px;overflow:auto;padding:2px 0 10px}.sports button{white-space:nowrap;border:1px solid var(--line);background:#0d2037;color:#d8e8f9;border-radius:999px;padding:9px 13px;font-size:12px}.sports button.active{background:#1464c4;border-color:#278bff;color:white}.match{padding:15px;margin-bottom:10px}.matchtop{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:11px;margin-bottom:12px}.live{color:#ff8585;font-weight:900}.teams{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center}.team{display:flex;align-items:center;gap:10px;margin:7px 0;font-weight:750;font-size:14px}.crest{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:#183a60;border:1px solid #35618d;font-size:10px}.odds{display:flex;gap:7px}.odd{min-width:66px;padding:11px 7px;border-radius:9px;background:#1a3451;color:#fff;border:1px solid #294c6d;text-align:center}.odd b{display:block;font-size:14px}.odd small{display:block;color:#a9bfd6;font-size:10px;margin-bottom:4px}.odd:hover{border-color:var(--cyan);background:#1d4974}.odd.selected{background:#0877f9;border-color:#65c5ff;box-shadow:0 0 0 1px #65c5ff}.casino-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.game{min-height:125px;border:1px solid var(--line);border-radius:14px;padding:14px;background:linear-gradient(145deg,#183a61,#10213a);display:flex;flex-direction:column;justify-content:space-between}.game .gameicon{font-size:30px}.game b{font-size:14px}.game span{font-size:11px;color:var(--muted)}.betbox{padding:15px;height:max-content;position:sticky;top:90px}.betbox h3{margin:0 0 14px}.empty{text-align:center;padding:24px 8px;color:var(--muted);font-size:13px}.empty .big{font-size:32px;margin-bottom:10px}.selection{background:#183858;border:1px solid #2c567b;border-radius:11px;padding:12px;margin-bottom:10px}.selectiontop{display:flex;justify-content:space-between;gap:8px;font-size:12px}.selection p{font-size:12px;color:#bfd1e5;margin:8px 0}.selection strong{color:var(--cyan)}.x{background:transparent;color:#b3c5d9;font-size:18px}.fieldlabel{display:block;font-size:11px;color:var(--muted);margin:14px 0 6px}.stake{width:100%;background:#07192c;border:1px solid #2d4c6b;border-radius:9px;padding:12px;color:white;outline:none}.stake:focus{border-color:var(--cyan)}.quick{display:flex;gap:6px;margin-top:7px}.quick button{flex:1;background:#183858;color:#cce3fb;border-radius:7px;padding:7px;font-size:11px}.summaryline{display:flex;justify-content:space-between;font-size:12px;color:#b9cde2;margin:10px 0}.summaryline b{color:white}.place{width:100%;margin-top:9px}.place:disabled{opacity:.4;cursor:not-allowed}.fine{font-size:10px;color:#8fa7c1;line-height:1.5;margin-top:10px}.account{display:none;position:fixed;inset:0;background:#020914cc;z-index:30;align-items:center;justify-content:center;padding:16px}.modal{background:#102641;border:1px solid #35577b;border-radius:18px;padding:22px;width:min(420px,100%);box-shadow:0 25px 90px #0008}.modalhead{display:flex;justify-content:space-between;align-items:center}.modal h2{margin:0 0 6px}.modal p{font-size:13px;color:var(--muted);line-height:1.5}.modal input{width:100%;padding:12px;margin:7px 0;background:#07192c;border:1px solid #2d4c6b;border-radius:9px;color:white}.modal .primary{width:100%;margin-top:8px}.tabs{display:flex;gap:6px;margin:16px 0}.tabs button{flex:1;padding:9px;background:#193654;color:#c7d9eb;border-radius:8px}.tabs button.active{background:#146bce;color:white}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#e8fff6;color:#07563a;padding:12px 18px;border-radius:12px;font-weight:800;font-size:13px;box-shadow:0 8px 35px #0005;display:none;z-index:50;max-width:90vw}.history{display:none}.historyitem{padding:12px;border-bottom:1px solid var(--line);font-size:12px;color:#c6d8eb}.historyitem b{color:#fff}.footer{text-align:center;color:#8098b4;font-size:11px;padding:30px 18px;line-height:1.7}.mobilebet{display:none}
+@media(max-width:980px){.layout{grid-template-columns:190px minmax(0,1fr)}.betbox{position:static;grid-column:2}.side{grid-row:1 / span 2}.navlinks{display:none}}
+@media(max-width:650px){.nav{padding:12px}.brand{font-size:21px}.pill.balance{display:none}.layout{display:flex;flex-direction:column;padding:0 12px;margin:12px auto;gap:12px}.side{display:none}.hero{padding:20px}.hero:after{right:0;font-size:130px}.match{padding:12px}.teams{grid-template-columns:1fr}.odds{width:100%}.odd{flex:1;min-width:0;padding:10px 3px}.casino-grid{grid-template-columns:repeat(2,1fr)}.betbox{position:static}.mobilebet{display:block;position:fixed;bottom:12px;right:12px;z-index:20;border-radius:999px;padding:12px 16px;background:#1680ff;color:white;font-weight:900;box-shadow:0 8px 30px #0008}.footer{padding-bottom:90px}}
+</style>
+</head>
+<body>
+<div class="notice">MODO DEMONSTRAÇÃO • SALDO E APOSTAS FICTÍCIOS • NÃO HÁ DEPÓSITOS OU SAQUES</div>
+<header class="top"><div class="nav">
+  <a class="brand" href="#"><span>GOAT</span>BET<span>★</span></a>
+  <div class="navlinks"><button class="active" data-page="sports">Esportes</button><button data-page="casino">Cassino</button><button data-page="history">Minhas apostas</button></div>
+  <span class="pill balance" id="balanceTop">Saldo virtual: R$ 1.000,00</span>
+  <button class="primary" id="accountButton">Entrar / Criar conta</button>
+</div></header>
+<div class="layout">
+  <aside class="side">
+    <h3>Menu principal</h3>
+    <button class="active" data-page="sports"><span class="emoji">⚽</span> Esportes</button>
+    <button data-page="casino"><span class="emoji">🎰</span> Cassino demo</button>
+    <button data-page="history"><span class="emoji">🧾</span> Minhas apostas</button>
+    <div style="height:1px;background:var(--line);margin:13px 0"></div>
+    <h3>Esportes</h3>
+    <button class="sportfilter active" data-sport="Todos"><span class="emoji">🔥</span> Todos os esportes</button>
+    <button class="sportfilter" data-sport="Futebol"><span class="emoji">⚽</span> Futebol</button>
+    <button class="sportfilter" data-sport="Basquete"><span class="emoji">🏀</span> Basquete</button>
+    <button class="sportfilter" data-sport="Tênis"><span class="emoji">🎾</span> Tênis</button>
+    <p style="font-size:10px;color:#819bb7;line-height:1.5;margin:18px 8px 3px">Todos os eventos e odds são ilustrativos, apenas para testar a interface.</p>
+  </aside>
+  <main>
+    <section id="sportsPage">
+      <div class="hero"><div class="eyebrow">A EXPERIÊNCIA GOATBET</div><h1>Seu jogo. Sua emoção. Seu jeito.</h1><p>Explore partidas de demonstração, monte seu cupom e acompanhe resultados simulados — tudo com saldo virtual.</p><div class="cta"><button class="primary" id="exploreBtn">Explorar partidas ↓</button><small>100% grátis • Sem dinheiro real</small></div></div>
+      <div class="section-head"><h2>Eventos em destaque</h2><span id="eventCount">6 eventos fictícios</span></div>
+      <div class="sports"><button class="active" data-sport="Todos">Todos</button><button data-sport="Futebol">⚽ Futebol</button><button data-sport="Basquete">🏀 Basquete</button><button data-sport="Tênis">🎾 Tênis</button></div>
+      <div id="matches"></div>
+    </section>
+    <section id="casinoPage" style="display:none">
+      <div class="hero"><div class="eyebrow">CASSINO DE TESTE</div><h1>Entre no modo diversão.</h1><p>Minijogos simples para testar a navegação e a interação. Não são jogos de azar com dinheiro real.</p></div>
+      <div class="section-head"><h2>Jogos demonstrativos</h2><span>Saldo virtual</span></div>
+      <div class="casino-grid">
+        <div class="game"><div class="gameicon">🎡</div><div><b>Roda da Sorte</b><br><span>Gire e descubra um prêmio virtual.</span></div><button class="primary" style="margin-top:12px" onclick="playWheel()">Girar • R$ 10</button></div>
+        <div class="game"><div class="gameicon">🎲</div><div><b>Dados</b><br><span>Tente tirar 4, 5 ou 6.</span></div><button class="primary" style="margin-top:12px" onclick="playDice()">Jogar • R$ 10</button></div>
+        <div class="game"><div class="gameicon">🃏</div><div><b>Maior carta</b><br><span>Você contra a máquina.</span></div><button class="primary" style="margin-top:12px" onclick="playCard()">Jogar • R$ 10</button></div>
+      </div>
+      <p class="fine">Os minijogos usam apenas créditos virtuais locais. Resultados são aleatórios e não representam chances ou pagamentos reais.</p>
+    </section>
+    <section id="historyPage" style="display:none">
+      <div class="hero"><div class="eyebrow">SUA ATIVIDADE</div><h1>Histórico de demonstração</h1><p>Acompanhe os cupons de teste e os resultados dos minijogos feitos neste navegador.</p></div>
+      <div class="card" id="historyList" style="overflow:hidden"><div class="empty">Você ainda não tem atividade registrada.</div></div>
+      <button class="ghost" style="margin-top:12px" id="resetBtn">Reiniciar demonstração</button>
+    </section>
+  </main>
+  <aside class="betbox" id="betbox">
+    <h3>🎟️ Seu cupom de teste</h3>
+    <div id="selections"><div class="empty"><div class="big">＋</div>Selecione uma odd em uma partida para adicionar ao cupom.</div></div>
+    <label class="fieldlabel" for="stake">Valor da aposta virtual (R$)</label>
+    <input class="stake" type="number" id="stake" min="1" max="1000" step="1" value="10">
+    <div class="quick"><button data-stake="5">R$ 5</button><button data-stake="10">R$ 10</button><button data-stake="25">R$ 25</button><button data-stake="50">R$ 50</button></div>
+    <div class="summaryline"><span>Odd total</span><b id="totalOdd">—</b></div>
+    <div class="summaryline"><span>Retorno potencial</span><b id="potential">—</b></div>
+    <div class="summaryline"><span>Saldo virtual</span><b id="balanceSide">R$ 1.000,00</b></div>
+    <button class="primary place" id="placeBet" disabled>Confirmar aposta de teste</button>
+    <p class="fine">Este cupom é uma simulação. Não aceita dinheiro, não paga prêmios e não representa uma oferta de apostas.</p>
+  </aside>
+</div>
+<button class="mobilebet" id="mobileBet">🎟️ Cupom <span id="slipCount">0</span></button>
+<div class="account" id="accountModal"><div class="modal">
+  <div class="modalhead"><h2 id="modalTitle">Sua conta demo</h2><button class="x" id="closeModal">✕</button></div>
+  <p>Crie um perfil local para personalizar a demonstração. Os dados ficam somente neste navegador e não são uma conta de apostas real.</p>
+  <div class="tabs"><button class="active" id="loginTab">Entrar</button><button id="registerTab">Criar conta</button></div>
+  <form id="accountForm"><input id="userName" placeholder="Seu nome (para criar conta)" style="display:none"><input id="userEmail" type="email" placeholder="E-mail" required><input id="userPassword" type="password" placeholder="Senha (mínimo 4 caracteres)" minlength="4" required><button class="primary" type="submit" id="submitAccount">Entrar na demonstração</button></form>
+  <p class="fine">Não use uma senha que você utiliza em outros serviços. Esta conta é apenas local, sem autenticação segura em servidor.</p>
+</div></div>
+<div class="toast" id="toast"></div>
+<footer class="footer">GOATBET • PROTÓTIPO INTERATIVO GRATUITO<br>Somente demonstração. Eventos, odds, resultados e créditos são fictícios.<br>Sem apostas reais, depósitos, saques ou prêmios.</footer>
+<script>
+const events=[
+{id:1,sport:"Futebol",league:"Liga Demo • Hoje, 16:00",home:"Atlético Azul",away:"Leões FC",abbr:["AA","LF"],odds:[1.82,3.25,4.10],labels:["Casa","Empate","Fora"],live:true},
+{id:2,sport:"Futebol",league:"Copa Virtual • Hoje, 18:30",home:"Porto Dourado",away:"União Norte",abbr:["PD","UN"],odds:[2.15,3.10,3.05],labels:["Casa","Empate","Fora"]},
+{id:3,sport:"Basquete",league:"Liga Demo • Hoje, 19:00",home:"Trovões BC",away:"Cometas BC",abbr:["TB","CB"],odds:[1.72,0,2.08],labels:["Casa","","Fora"]},
+{id:4,sport:"Tênis",league:"Torneio Demo • Hoje, 20:15",home:"R. Silva",away:"M. Costa",abbr:["RS","MC"],odds:[1.91,0,1.91],labels:["Jogador 1","","Jogador 2"]},
+{id:5,sport:"Futebol",league:"Liga Demo • Amanhã, 14:00",home:"Estrela FC",away:"Real Montanha",abbr:["EF","RM"],odds:[2.48,3.00,2.70],labels:["Casa","Empate","Fora"]},
+{id:6,sport:"Basquete",league:"Liga Demo • Amanhã, 21:00",home:"Falcões",away:"Panteras",abbr:["FA","PA"],odds:[1.88,0,1.92],labels:["Casa","","Fora"]}
+];
+const money=n=>Number(n).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+let state={balance:1000,slip:[],history:[],filter:"Todos",page:"sports",user:null,accountMode:"login"};
+try{const saved=JSON.parse(localStorage.getItem("goatbet_demo_v1")||"null");if(saved)state={...state,...saved};}catch(e){}
+function persist(){try{localStorage.setItem("goatbet_demo_v1",JSON.stringify(state));}catch(e){}}
+function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.style.display="block";clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.style.display="none",2500)}
+function renderMatches(){const list=document.getElementById("matches");const arr=events.filter(e=>state.filter==="Todos"||e.sport===state.filter);document.getElementById("eventCount").textContent=arr.length+" eventos fictícios";list.innerHTML=arr.map(e=>`<article class="card match"><div class="matchtop"><span>${e.sport} • ${e.league}</span><span class="${e.live?'live':''}">${e.live?'● AO VIVO DEMO':'DEMONSTRAÇÃO'}</span></div><div class="teams"><div><div class="team"><span class="crest">${e.abbr[0]}</span>${e.home}</div><div class="team"><span class="crest">${e.abbr[1]}</span>${e.away}</div></div><div class="odds">${e.odds.map((o,i)=>o?`<button class="odd ${state.slip.some(s=>s.eventId===e.id&&s.index===i)?'selected':''}" data-event="${e.id}" data-index="${i}"><small>${e.labels[i]}</small><b>${o.toFixed(2)}</b></button>`:'').join('')}</div></div></article>`).join("");list.querySelectorAll(".odd").forEach(b=>b.addEventListener("click",()=>addSelection(+b.dataset.event,+b.dataset.index)))}
+function addSelection(id,index){const e=events.find(x=>x.id===id);const old=state.slip.findIndex(s=>s.eventId===id);if(old>=0){if(state.slip[old].index===index){state.slip.splice(old,1)}else{state.slip[old]={eventId:id,index,odd:e.odds[index],event:`${e.home} x ${e.away}`,pick:e.labels[index]}}}else{state.slip.push({eventId:id,index,odd:e.odds[index],event:`${e.home} x ${e.away}`,pick:e.labels[index]})}renderAll()}
+function renderSlip(){const box=document.getElementById("selections");if(!state.slip.length){box.innerHTML='<div class="empty"><div class="big">＋</div>Selecione uma odd em uma partida para adicionar ao cupom.</div>'}else{box.innerHTML=state.slip.map((s,i)=>`<div class="selection"><div class="selectiontop"><b>${s.event}</b><button class="x" data-remove="${i}">×</button></div><p>${s.pick} • Odd <strong>${s.odd.toFixed(2)}</strong></p></div>`).join("");box.querySelectorAll("[data-remove]").forEach(b=>b.onclick=()=>{state.slip.splice(+b.dataset.remove,1);renderAll()})}
+const total=state.slip.reduce((n,s)=>n*s.odd,1),stake=Number(document.getElementById("stake").value||0);document.getElementById("totalOdd").textContent=state.slip.length?total.toFixed(2):"—";document.getElementById("potential").textContent=state.slip.length&&stake>0?money(stake*total):"—";document.getElementById("placeBet").disabled=!state.slip.length||stake<1||stake>state.balance||stake>1000;document.getElementById("slipCount").textContent=state.slip.length}
+function renderBalance(){document.getElementById("balanceTop").textContent="Saldo virtual: "+money(state.balance);document.getElementById("balanceSide").textContent=money(state.balance);document.getElementById("accountButton").textContent=state.user?state.user.name+" ▾":"Entrar / Criar conta"}
+function renderHistory(){const box=document.getElementById("historyList");box.innerHTML=state.history.length?[...state.history].reverse().map(h=>`<div class="historyitem"><b>${h.title}</b><br><span>${h.detail}</span><br><span style="color:#7f9ab7">${h.date}</span></div>`).join(""):'<div class="empty">Você ainda não tem atividade registrada.</div>'}
+function renderAll(){renderMatches();renderSlip();renderBalance();renderHistory();persist()}
+function page(p){state.page=p;["sports","casino","history"].forEach(x=>document.getElementById(x+"Page").style.display=x===p?"block":"none");document.querySelectorAll("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===p));persist()}
+document.querySelectorAll("[data-page]").forEach(b=>b.onclick=()=>page(b.dataset.page));
+document.querySelectorAll("[data-sport]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.sport;document.querySelectorAll("[data-sport]").forEach(x=>x.classList.toggle("active",x.dataset.sport===state.filter));renderMatches()});
+document.getElementById("exploreBtn").onclick=()=>document.getElementById("matches").scrollIntoView({behavior:"smooth",block:"start"});
+document.querySelectorAll("[data-stake]").forEach(b=>b.onclick=()=>{document.getElementById("stake").value=b.dataset.stake;renderSlip()});
+document.getElementById("stake").oninput=renderSlip;
+document.getElementById("placeBet").onclick=()=>{const stake=Number(document.getElementById("stake").value),total=state.slip.reduce((n,s)=>n*s.odd,1);if(!state.slip.length||stake<1||stake>state.balance)return;state.balance-=stake;state.history.push({title:"Cupom de teste • "+money(stake),detail:state.slip.map(s=>s.event+" — "+s.pick+" ("+s.odd.toFixed(2)+")").join(" | ")+" • Odd total "+total.toFixed(2)+" • Retorno potencial "+money(stake*total)+" (não pago)",date:new Date().toLocaleString("pt-BR")});state.slip=[];renderAll();toast("Cupom de demonstração registrado! Nenhum dinheiro real foi movimentado.");};
+document.getElementById("mobileBet").onclick=()=>{document.getElementById("betbox").scrollIntoView({behavior:"smooth",block:"center"})};
+function gameResult(title,bet,win,detail){if(state.balance<bet){toast("Saldo virtual insuficiente.");return}state.balance-=bet;state.balance+=win;state.history.push({title,detail,date:new Date().toLocaleString("pt-BR")});renderAll();toast(detail)}
+function playWheel(){const bet=10;const prizes=[0,0,5,10,15,25,40];const prize=prizes[Math.floor(Math.random()*prizes.length)];gameResult("Roda da Sorte • "+money(bet),bet,prize,prize?`Você ganhou ${money(prize)} virtuais!`:"Desta vez não saiu prêmio.")}
+function playDice(){const bet=10,n=1+Math.floor(Math.random()*6),win=n>=4?20:0;gameResult("Dados • "+money(bet),bet,win,win?`Saiu ${n}: você ganhou ${money(win)} virtuais!`:`Saiu ${n}: tente novamente.`)}
+function playCard(){const bet=10,you=1+Math.floor(Math.random()*13),machine=1+Math.floor(Math.random()*13),win=you>machine?20:you===machine?10:0;gameResult("Maior carta • "+money(bet),bet,win,`Sua carta: ${you}. Máquina: ${machine}. ${win?`Retorno virtual: ${money(win)}.`:"A máquina venceu."}`)}
+const modal=document.getElementById("accountModal");document.getElementById("accountButton").onclick=()=>{if(state.user){if(confirm("Deseja sair do perfil local?")){state.user=null;renderBalance();persist();toast("Você saiu do perfil demo.")}}else{modal.style.display="flex"}};
+document.getElementById("closeModal").onclick=()=>modal.style.display="none";modal.onclick=e=>{if(e.target===modal)modal.style.display="none"};
+function accountMode(m){state.accountMode=m;document.getElementById("loginTab").classList.toggle("active",m==="login");document.getElementById("registerTab").classList.toggle("active",m==="register");document.getElementById("modalTitle").textContent=m==="login"?"Sua conta demo":"Criar perfil demo";document.getElementById("userName").style.display=m==="register"?"block":"none";document.getElementById("userName").required=m==="register";document.getElementById("submitAccount").textContent=m==="login"?"Entrar na demonstração":"Criar perfil local"}
+document.getElementById("loginTab").onclick=()=>accountMode("login");document.getElementById("registerTab").onclick=()=>accountMode("register");
+document.getElementById("accountForm").onsubmit=e=>{e.preventDefault();const email=document.getElementById("userEmail").value.trim(),password=document.getElementById("userPassword").value;if(password.length<4)return toast("Use pelo menos 4 caracteres.");const name=state.accountMode==="register"?document.getElementById("userName").value.trim():(email.split("@")[0]||"Jogador");if(state.accountMode==="register"){state.user={name,email};toast("Perfil local criado!")}else{state.user={name,email};toast("Bem-vindo à demonstração!")}modal.style.display="none";renderBalance();persist()};
+document.getElementById("resetBtn").onclick=()=>{if(confirm("Reiniciar saldo, cupom e histórico desta demonstração?")){state.balance=1000;state.slip=[];state.history=[];state.user=null;state.filter="Todos";renderAll();toast("Demonstração reiniciada.")}};
+renderAll();page(state.page||"sports");accountMode("login");
+</script>
+</body>
+</html>
